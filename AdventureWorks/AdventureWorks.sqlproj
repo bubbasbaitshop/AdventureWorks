@@ -13,7 +13,7 @@
     </RootPath>
     <RootNamespace>AdventureWorks</RootNamespace>
     <AssemblyName>AdventureWorks</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -22,6 +22,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,5 +58,217 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Production\" />
+    <Folder Include="Production\Tables\" />
+    <Folder Include="HumanResources\" />
+    <Folder Include="HumanResources\Tables\" />
+    <Folder Include="Purchasing\" />
+    <Folder Include="Purchasing\Tables\" />
+    <Folder Include="Sales\" />
+    <Folder Include="Sales\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Person\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="History\" />
+    <Folder Include="History\Tables\" />
+    <Folder Include="Sales\Views\" />
+    <Folder Include="Purchasing\Views\" />
+    <Folder Include="Person\Views\" />
+    <Folder Include="HumanResources\Views\" />
+    <Folder Include="Production\Views\" />
+    <Folder Include="Storage\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="HumanResources\Stored Procedures\" />
+    <Folder Include="Stage\" />
+    <Folder Include="Stage\Stored Procedures\" />
+    <Folder Include="Database Triggers\" />
+    <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="Security\" />
+    <Folder Include="Person\XMLSchemaCollections\" />
+    <Folder Include="HumanResources\XMLSchemaCollections\" />
+    <Folder Include="Production\XMLSchemaCollections\" />
+    <Folder Include="Sales\XMLSchemaCollections\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Production\Tables\ScrapReason_1.sql" />
+    <Build Include="HumanResources\Tables\Shift_1.sql" />
+    <Build Include="Production\Tables\ProductCategory_1.sql" />
+    <Build Include="Purchasing\Tables\ShipMethod_1.sql" />
+    <Build Include="Production\Tables\ProductCostHistory_1.sql" />
+    <Build Include="Production\Tables\ProductDescription_1.sql" />
+    <Build Include="Sales\Tables\ShoppingCartItem_1.sql" />
+    <Build Include="Production\Tables\ProductDocument_1.sql" />
+    <Build Include="dbo\Tables\DatabaseLog_1.sql" />
+    <Build Include="Production\Tables\ProductInventory_1.sql" />
+    <Build Include="Sales\Tables\SpecialOffer_1.sql" />
+    <Build Include="dbo\Tables\ErrorLog_1.sql" />
+    <Build Include="Production\Tables\ProductListPriceHistory_1.sql" />
+    <Build Include="Person\Tables\Address_1.sql" />
+    <Build Include="Sales\Tables\SpecialOfferProduct_1.sql" />
+    <Build Include="Production\Tables\ProductModel_1.sql" />
+    <Build Include="Person\Tables\AddressType_1.sql" />
+    <Build Include="Person\Tables\StateProvince_1.sql" />
+    <Build Include="Production\Tables\ProductModelIllustration_1.sql" />
+    <Build Include="dbo\Tables\AWBuildVersion_1.sql" />
+    <Build Include="Production\Tables\ProductModelProductDescriptionCulture_1.sql" />
+    <Build Include="Production\Tables\BillOfMaterials_1.sql" />
+    <Build Include="Sales\Tables\Store_1.sql" />
+    <Build Include="Production\Tables\ProductPhoto_1.sql" />
+    <Build Include="Production\Tables\ProductProductPhoto_1.sql" />
+    <Build Include="Production\Tables\TransactionHistory_1.sql" />
+    <Build Include="Production\Tables\ProductReview_1.sql" />
+    <Build Include="dbo\Tables\DB_Version_1.sql" />
+    <Build Include="Person\Tables\BusinessEntity_1.sql" />
+    <Build Include="Production\Tables\TransactionHistoryArchive_1.sql" />
+    <Build Include="Production\Tables\ProductSubcategory_1.sql" />
+    <Build Include="Person\Tables\BusinessEntityAddress_1.sql" />
+    <Build Include="Purchasing\Tables\ProductVendor_1.sql" />
+    <Build Include="Person\Tables\BusinessEntityContact_1.sql" />
+    <Build Include="Production\Tables\UnitMeasure_1.sql" />
+    <Build Include="Purchasing\Tables\Vendor_1.sql" />
+    <Build Include="Person\Tables\ContactType_1.sql" />
+    <Build Include="Sales\Tables\CountryRegionCurrency_1.sql" />
+    <Build Include="Person\Tables\CountryRegion_1.sql" />
+    <Build Include="Production\Tables\WorkOrder_1.sql" />
+    <Build Include="Purchasing\Tables\PurchaseOrderDetail_1.sql" />
+    <Build Include="Sales\Tables\CreditCard_1.sql" />
+    <Build Include="Production\Tables\Culture_1.sql" />
+    <Build Include="Production\Tables\WorkOrderRouting_1.sql" />
+    <Build Include="Sales\Tables\Currency_1.sql" />
+    <Build Include="Purchasing\Tables\PurchaseOrderHeader_1.sql" />
+    <Build Include="Sales\Tables\CurrencyRate_1.sql" />
+    <Build Include="Sales\Tables\Customer_1.sql" />
+    <Build Include="HumanResources\Tables\Department_1.sql" />
+    <Build Include="Production\Tables\Document_1.sql" />
+    <Build Include="Person\Tables\EmailAddress_1.sql" />
+    <Build Include="HumanResources\Tables\Employee_1.sql" />
+    <Build Include="Sales\Tables\SalesOrderHeader_1.sql" />
+    <Build Include="HumanResources\Tables\EmployeeDepartmentHistory_1.sql" />
+    <Build Include="History\Tables\Sales-SalesOrderDetail-History_1.sql" />
+    <Build Include="HumanResources\Tables\EmployeePayHistory_1.sql" />
+    <Build Include="Sales\Tables\SalesOrderHeaderSalesReason_1.sql" />
+    <Build Include="Sales\Tables\SalesPerson_1.sql" />
+    <Build Include="Production\Tables\Illustration_1.sql" />
+    <Build Include="HumanResources\Tables\JobCandidate_1.sql" />
+    <Build Include="Production\Tables\Location_1.sql" />
+    <Build Include="Sales\Tables\SalesOrderDetail_1.sql" />
+    <Build Include="Person\Tables\Password_1.sql" />
+    <Build Include="Sales\Tables\SalesPersonQuotaHistory_1.sql" />
+    <Build Include="Person\Tables\Person_1.sql" />
+    <Build Include="Sales\Tables\SalesReason_1.sql" />
+    <Build Include="Sales\Tables\SalesTaxRate_1.sql" />
+    <Build Include="Sales\Tables\PersonCreditCard_1.sql" />
+    <Build Include="Person\Tables\PersonPhone_1.sql" />
+    <Build Include="Sales\Tables\SalesTerritory_1.sql" />
+    <Build Include="Person\Tables\PhoneNumberType_1.sql" />
+    <Build Include="Production\Tables\Product_1.sql" />
+    <Build Include="Sales\Tables\SalesTerritoryHistory_1.sql" />
+    <Build Include="Sales\Views\vStoreWithContacts_1.sql" />
+    <Build Include="Sales\Views\vStoreWithAddresses_1.sql" />
+    <Build Include="Purchasing\Views\vVendorWithContacts_1.sql" />
+    <Build Include="Purchasing\Views\vVendorWithAddresses_1.sql" />
+    <Build Include="Person\Views\vAdditionalContactInfo_1.sql" />
+    <Build Include="HumanResources\Views\vEmployee_1.sql" />
+    <Build Include="HumanResources\Views\vEmployeeDepartment_1.sql" />
+    <Build Include="HumanResources\Views\vEmployeeDepartmentHistory_1.sql" />
+    <Build Include="Sales\Views\vIndividualCustomer_1.sql" />
+    <Build Include="Sales\Views\vPersonDemographics_1.sql" />
+    <Build Include="HumanResources\Views\vJobCandidate_1.sql" />
+    <Build Include="HumanResources\Views\vJobCandidateEmployment_1.sql" />
+    <Build Include="HumanResources\Views\vJobCandidateEducation_1.sql" />
+    <Build Include="Production\Views\vProductAndDescription_1.sql" />
+    <Build Include="Production\Views\vProductModelCatalogDescription_1.sql" />
+    <Build Include="Production\Views\vProductModelInstructions_1.sql" />
+    <Build Include="Sales\Views\vSalesPerson_1.sql" />
+    <Build Include="Sales\Views\vSalesPersonSalesByFiscalYears_1.sql" />
+    <Build Include="Person\Views\vStateProvinceCountryRegion_1.sql" />
+    <Build Include="Sales\Views\vStoreWithDemographics_1.sql" />
+    <Build Include="Storage\AW2014FullTextCatalog_1.sql" />
+    <Build Include="FullTextIndexes_1.sql" />
+    <Build Include="FullTextIndexes_2.sql" />
+    <Build Include="FullTextIndexes_3.sql" />
+    <Build Include="dbo\Functions\ufnGetAccountingStartDate_1.sql" />
+    <Build Include="dbo\Functions\ufnGetAccountingEndDate_1.sql" />
+    <Build Include="dbo\Functions\ufnGetProductDealerPrice_1.sql" />
+    <Build Include="dbo\Functions\ufnGetProductListPrice_1.sql" />
+    <Build Include="dbo\Functions\ufnGetProductStandardCost_1.sql" />
+    <Build Include="dbo\Functions\ufnGetStock_1.sql" />
+    <Build Include="dbo\Functions\ufnGetDocumentStatusText_1.sql" />
+    <Build Include="dbo\Functions\ufnGetPurchaseOrderStatusText_1.sql" />
+    <Build Include="dbo\Functions\ufnGetSalesOrderStatusText_1.sql" />
+    <Build Include="dbo\Functions\ufnLeadingZeros_1.sql" />
+    <Build Include="dbo\Functions\ufnGetContactInformation_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspGetBillOfMaterials_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspGetEmployeeManagers_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspGetManagerEmployees_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspGetWhereUsedProductID_1.sql" />
+    <Build Include="HumanResources\Stored Procedures\uspUpdateEmployeeHireInfo_1.sql" />
+    <Build Include="HumanResources\Stored Procedures\uspUpdateEmployeeLogin_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspPrintError_1.sql" />
+    <Build Include="HumanResources\Stored Procedures\uspUpdateEmployeePersonalInfo_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspLogError_1.sql" />
+    <Build Include="dbo\Stored Procedures\uspSearchCandidateResumes_1.sql" />
+    <Build Include="Stage\Stored Procedures\InsertProduct_1.sql" />
+    <Build Include="Database Triggers\ddlDatabaseTriggerLog_1.sql" />
+    <Build Include="dbo\User Defined Types\AccountNumber_1.sql" />
+    <Build Include="dbo\User Defined Types\Flag_1.sql" />
+    <Build Include="dbo\User Defined Types\NameStyle_1.sql" />
+    <Build Include="dbo\User Defined Types\Name_1.sql" />
+    <Build Include="dbo\User Defined Types\OrderNumber_1.sql" />
+    <Build Include="dbo\User Defined Types\Phone_1.sql" />
+    <Build Include="Security\History_1.sql" />
+    <Build Include="Security\HumanResources_1.sql" />
+    <Build Include="Security\Person_1.sql" />
+    <Build Include="Security\Production_1.sql" />
+    <Build Include="Security\Purchasing_1.sql" />
+    <Build Include="Security\Sales_1.sql" />
+    <Build Include="Security\Stage_1.sql" />
+    <Build Include="Person\XMLSchemaCollections\AdditionalContactInfoSchemaCollection_1.sql" />
+    <Build Include="HumanResources\XMLSchemaCollections\HRResumeSchemaCollection_1.sql" />
+    <Build Include="Person\XMLSchemaCollections\IndividualSurveySchemaCollection_1.sql" />
+    <Build Include="Production\XMLSchemaCollections\ManuInstructionsSchemaCollection_1.sql" />
+    <Build Include="Production\XMLSchemaCollections\ProductDescriptionSchemaCollection_1.sql" />
+    <Build Include="Sales\XMLSchemaCollections\StoreSurveySchemaCollection_1.sql" />
+    <Build Include="ExtendedProperties_1.sql" />
+    <Build Include="ExtendedProperties_2.sql" />
+    <Build Include="ExtendedProperties_3.sql" />
+    <Build Include="ExtendedProperties_4.sql" />
+    <Build Include="ExtendedProperties_5.sql" />
+    <Build Include="ExtendedProperties_6.sql" />
+    <Build Include="ExtendedProperties_7.sql" />
+    <Build Include="ExtendedProperties_8.sql" />
+    <Build Include="ExtendedProperties_9.sql" />
+    <Build Include="ExtendedProperties_10.sql" />
+    <Build Include="ExtendedProperties_11.sql" />
+    <Build Include="ExtendedProperties_12.sql" />
+    <Build Include="ExtendedProperties_13.sql" />
+    <Build Include="ExtendedProperties_14.sql" />
+    <Build Include="ExtendedProperties_15.sql" />
+    <Build Include="ExtendedProperties_16.sql" />
+    <Build Include="ExtendedProperties_17.sql" />
+    <Build Include="ExtendedProperties_18.sql" />
+    <Build Include="ExtendedProperties_19.sql" />
+    <Build Include="ExtendedProperties_20.sql" />
+    <Build Include="ExtendedProperties_21.sql" />
+    <Build Include="ExtendedProperties_22.sql" />
+    <Build Include="ExtendedProperties_23.sql" />
+    <Build Include="ExtendedProperties_24.sql" />
+    <Build Include="ExtendedProperties_25.sql" />
+    <Build Include="ExtendedProperties_26.sql" />
+    <Build Include="ExtendedProperties_27.sql" />
+    <Build Include="ExtendedProperties_28.sql" />
+    <Build Include="ExtendedProperties_29.sql" />
+    <Build Include="ExtendedProperties_30.sql" />
+    <Build Include="ExtendedProperties_31.sql" />
+    <Build Include="ExtendedProperties_32.sql" />
+    <Build Include="ExtendedProperties_33.sql" />
+    <Build Include="ExtendedProperties_34.sql" />
+    <Build Include="ExtendedProperties_35.sql" />
+    <Build Include="ExtendedProperties_36.sql" />
+    <Build Include="ExtendedProperties_37.sql" />
+    <Build Include="ExtendedProperties_38.sql" />
+    <Build Include="ExtendedProperties_39.sql" />
   </ItemGroup>
 </Project>
