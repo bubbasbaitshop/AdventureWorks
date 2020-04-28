@@ -25,28 +25,5 @@ INSERT INTO [Production].[Product]
            ,[SellEndDate]
            ,[DiscontinuedDate]
            ,[ModifiedDate])
-Select
-           [NAME] 
-           ,ProductNumber
-           ,MakeFlag
-           ,FinishedGoodsFlag
-           ,Color
-           ,SafetyStockLevel
-           ,ReorderPoint
-           ,StandardCost
-           ,ListPrice
-           ,SIZE
-           ,SizeUnitMeasureCode
-           ,WeightUnitMeasureCode
-           ,Weight
-           ,DaysToManufacture
-           ,ProductLine
-           ,Class
-           ,Style
-           ,ProductSubcategoryID
-           ,ProductModelID
-           ,SellStartDate
-           ,SellEndDate
-           ,DiscontinuedDate
-           ,ModifiedDate
+Select   *
 FROM [AdventureWorksStage].[DBO].[ProductStage]
